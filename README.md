@@ -3,6 +3,7 @@
 
 
 ###Implemente um projeto que controle uma hackatona de Engenharia de Software para os estudantes da PUCRS. Uma hackatona é comporta de Times, onde cada time tem um nome, uma nota e 5 alunos que fazem parte deste time.
+
 **Este projeto deve permitir:**
 criação de times (limitado a 15 times)
 registro de uma nota por time;
