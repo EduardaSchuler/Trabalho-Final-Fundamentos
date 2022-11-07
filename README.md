@@ -1,5 +1,5 @@
 # Trabalho Final de Fundamentos de Programação 2022/2
-### Professora: Ana Paula Terra Bacelo - PUCRS
+<sub>Professora: Ana Paula Terra Bacelo - PUCRS</sub>
 
 
 ### Implemente um projeto que controle uma hackatona de Engenharia de Software para os estudantes da PUCRS. Uma hackatona é comporta de Times, onde cada time tem um nome, uma nota e 5 alunos que fazem parte deste time.
