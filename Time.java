@@ -1,14 +1,13 @@
 public class Time{
-  private static final int TAMANHO = 5;
   private String nome; 
   private double nota;
   private Aluno[] alunos;
-  private int proximoIndice;
+  private int proximoIndice, tamanho;
 
-  public Time(String nome, double nota){
+  public Time(String nome, double nota, tamanho){
     this.nome = nome;
     this.nota = nota;
-    alunos = new Aluno[TAMANHO-1];
+    alunos = new Aluno[tamanho];
     proximoIndice = 0;
   }
 
@@ -19,12 +18,6 @@ public class Time{
   public double getNota(){
     return nota;
   }
-
-  public String getAlunos(){
-    for (int i = 0; i > TAMANHO; i ++){
-      return "";
-    }
-  }
   
   public boolean addAluno(Aluno aluno){
     alunos[proximoIndice] = aluno;
@@ -32,5 +25,11 @@ public class Time{
     return true;
   }
 
-  
+  public String toString(){
+    String saida = "O time " + getNome() + " ficou com a nota " + getNota();
+    for (int i = 0; i < proximoIndice; i++){
+        saida = saida + "\nTime composto por:" + "\n" + alunos[i].toString(); 
+    }
+    return saida;
+  }
 }
