@@ -4,7 +4,7 @@ public class HackatonApp{
   public static void main(String args[]){
     Scanner in = new Scanner (System.in);
     String nomeTime, nomeAluno, emailAluno;
-    int matriculaALuno, qtdTimes, qtdeAlunos, x = 0, y = 0;
+    int matriculaAluno, qtdTimes, qtdeAlunos, x = 0, y = 0;
     double notaTime;
 
     System.out.println("Quantos times há nesta Hackaton? ");
@@ -14,16 +14,33 @@ public class HackatonApp{
       do{
         System.out.println("Digite o nome do time: ");
         nomeTime = in.nextLine();
-        System.ou.println("Digite a nota deste time: ");
+        System.out.println("Digite a nota deste time: ");
         notaTime = in.nextDouble();
-        System.out.println("Quantos alunos há neste time");
-        qtdAlunos = in.nextInt();
-        Time time = new Time(nomeTime, notaTime, qtdAlunos);
+        System.out.println("Quantos alunos há neste time? ");
+        qtdeAlunos = in.nextInt();
         
-        if (qtdAlunos >= 0 && qtdAlunos <= 15){
+        Time time = new Time(nomeTime, notaTime, qtdeAlunos);
+        
+        if (qtdeAlunos >= 0 && qtdeAlunos <= 15){
           do {
+            System.out.println("Digite o nome do aluno: ");
+            nomeAluno = in.nextLine();
+            System.out.println("Digite a matricula deste aluno: ");
+            matriculaAluno = in.nextInt();
+            System.out.println("Digite o email deste alunos: ");
+            emailAluno = in.nextLine();
             
-          } while (y < qtdAlunos);
+            Aluno aluno = new Aluno(nomeAluno, matriculaAluno, emailAluno);
+            
+            if (addAluno(aluno) == true){
+                System.out.println("Aluno Adicionado");
+            } else {
+                System.out.println("Aluno não adicionado");
+            }
+            y++;
+          } while (y < qtdeAlunos);
+        } else {
+          System.out.println("Quantidade de alunos inválida.");
         }
         x++;
       } while (x < qtdTimes);
