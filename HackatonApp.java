@@ -32,13 +32,11 @@ public class HackatonApp{
             if (qtdeAlunos >= 0 && qtdeAlunos <= 15){
                 do {
                     System.out.println("Digite o nome do aluno: ");
-                    nomeAluno = in.nextLine();
-                    nomeAluno = in.nextLine();
+                    nomeAluno = in.next();
                     System.out.println("Digite a matricula deste aluno: ");
                     matriculaAluno = in.nextInt();
                     System.out.println("Digite o email deste alunos: ");
-                    emailAluno = in.nextLine();
-                    emailAluno = in.nextLine();
+                    emailAluno = in.next();
                     Aluno aluno = new Aluno(nomeAluno, matriculaAluno, emailAluno);
         
                     if (time.addAluno(aluno) == true){
