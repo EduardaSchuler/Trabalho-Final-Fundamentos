@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Aluno
-comment0.text=\n\ Cria\u00E7\u00E3o\ do\ aluno\ com\ os\ atributos\:\ nome,\ matricula\ e\ email\n\ \n\ @author\ (Eduarda\ Sobreira,\ Larissa\ Oliveira\ e\ Maria\ Eduarda\ Sch\u00FCler)\ \n\ @version\ (-)\n
+comment0.text=\r\n\ Cria\u00E7\u00E3o\ do\ aluno\ com\ os\ atributos\:\ nome,\ matricula\ e\ email\r\n\ \r\n\ @author\ (Eduarda\ Sobreira,\ Larissa\ Oliveira\ e\ Maria\ Eduarda\ Sch\u00FCler)\ \r\n\ @version\ (-)\r\n
 comment1.params=nome\ matricula\ email
 comment1.target=Aluno(java.lang.String,\ int,\ java.lang.String)
 comment2.params=

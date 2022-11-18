@@ -32,6 +32,14 @@ public class Time{
         return true;
     }
 
+    public String exibeTodosAlunos(){
+        String saida = "";
+        for (int i = 0; i < tamanho; i++){
+            saida = saida + alunos[i].getNome();
+        }
+        return saida;
+    }
+
     public String toString(){
         String saida = "O time " + getNome() + " ficou com a nota " + getNota();
         for (int i = 0; i < proximoIndice; i++){

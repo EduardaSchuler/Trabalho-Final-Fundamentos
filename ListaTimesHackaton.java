@@ -23,10 +23,18 @@ public class ListaTimesHackaton{
             return false;
         }
     }
+
+    public String getParticipantes(){
+        String saida = "";
+        for (int i = 0; i < tamanho; i++){
+            saida = saida + lista[i].exibeTodosAlunos();
+        }
+        return saida;
+    }
     
     public String toString(){
         String saida = "";
-        for(int i=0;i<proximoIndice;i++){
+        for(int i = 0; i < proximoIndice; i++){
             if(lista[i]!= null)
                  saida = saida +"\n-------------------\n"+ lista[i].toString();
         }
