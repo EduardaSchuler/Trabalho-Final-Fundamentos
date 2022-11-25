@@ -6,12 +6,11 @@
  */
 public class ListaTimesHackaton{
     private Time [] lista;
-    private int proximoIndice, tamanho;
+    private int proximoIndice, tamanho = 15;
     
-    public ListaTimesHackaton(int tamanho){
+    public ListaTimesHackaton(){
         lista = new Time[tamanho];
         proximoIndice = 0;
-        this.tamanho = tamanho;
     }
     
     public boolean addTime(Time time){
@@ -24,8 +23,23 @@ public class ListaTimesHackaton{
         }
     }
 
+    public Time buscaTimeVencedor(){
+        Time vencedor = lista[0];
+        int maior = 0;
+        if (proximoIndice==0){
+            return null;
+        } else {
+            for(int i=0;i<proximoIndice;i++){
+                if(lista[i].getNota() > maior){
+                    vencedor =  lista[i];
+                }
+            }
+            return vencedor;
+        }
+    }
+
     public String getParticipantes(){
-        String saida = "";
+        String saida = "A lista completa de participantes é: /n";
         for (int i = 0; i < tamanho; i++){
             saida = saida + lista[i].exibeTodosAlunos();
         }
@@ -36,7 +50,7 @@ public class ListaTimesHackaton{
         String saida = "";
         for(int i = 0; i < proximoIndice; i++){
             if(lista[i]!= null)
-                 saida = saida +"\n-------------------\n"+ lista[i].toString();
+                saida = saida +"\n-------------------\n"+ lista[i].toString();
         }
         return saida;
     }
