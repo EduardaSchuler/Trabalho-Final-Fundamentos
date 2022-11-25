@@ -13,10 +13,7 @@ public class HackatonApp{
         String nomeTime, nomeAluno, emailAluno;
         int matriculaAluno, qtdTimes, opcao, qtdeAlunos, x = 0, y = 0;
         double notaTime;
-        
-        System.out.println("Quantos times gostaria de inserir na Hackaton? ");
-        qtdTimes = in.nextInt();
-        ListaTimesHackaton listaTimes = new ListaTimesHackaton(qtdTimes);
+        ListaTimesHackaton listaTimes = new ListaTimesHackaton();
 
         do{
             menu();
@@ -52,7 +49,7 @@ public class HackatonApp{
                                 y++;
                             } while (y < qtdeAlunos);
                         } else {
-                          System.out.println("Quantidade de alunos inválida.");
+                            System.out.println("Quantidade de alunos inválida.");
                         }
                         listaTimes.addTime(time);
                         x++;
@@ -63,6 +60,16 @@ public class HackatonApp{
 
                 case 2:{
                     System.out.println(listaTimes.getParticipantes());
+                }
+                break;
+
+                case 3:{
+                    Time time = lista.buscaTimeVencedor();
+                    if(time != null){
+                        System.out.println("O time vencedor é: \n" + time.toString());
+                    } else {
+                        System.out.println("Ainda não há um vencedor");
+                    }
                 }
                 break;
             } 
