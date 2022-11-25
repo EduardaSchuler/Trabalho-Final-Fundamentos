@@ -25,7 +25,7 @@ public class Time{
     public double getNota(){
         return nota;
     }
-  
+
     public boolean addAluno(Aluno aluno){
         alunos[proximoIndice] = aluno;
         proximoIndice++;
@@ -34,17 +34,14 @@ public class Time{
 
     public String exibeTodosAlunos(){
         String saida = "";
-        for (int i = 0; i < tamanho; i++){
-            saida = saida + alunos[i].getNome();
+        for (int i = 0; i < proximoIndice; i++){
+            saida = saida + alunos[i].toString() + "\n";
         }
         return saida;
     }
 
     public String toString(){
-        String saida = "O time " + getNome() + " ficou com a nota " + getNota();
-        for (int i = 0; i < proximoIndice; i++){
-            saida = saida + "\nTime composto por:" + "\n" + alunos[i].toString(); 
-        }
+        String saida = "O time " + getNome() + " ficou com a nota " + getNota() + "\nTime composto por:" + "\n" + exibeTodosAlunos();
         return saida;
     }
 }
